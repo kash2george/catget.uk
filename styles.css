@@ -1,0 +1,131 @@
+:root {
+  --color-primary: #ff9800;
+  --color-bg: #f9f9fb;
+  --color-dark-bg: #1a1a1a;
+  --color-dark-text: #f5f5f5;
+  --color-text: #2d2d2d;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  transition: var(--transition);
+}
+
+body.dark {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.toggle-theme {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.toggle-theme:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.products {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.product {
+  background-color: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.product h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.product p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: var(--transition);
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #e17c00;
+}
+
+.story {
+  max-width: 800px;
+  margin: 3rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  margin: 3rem auto 2rem;
+  opacity: 0.6;
+}
